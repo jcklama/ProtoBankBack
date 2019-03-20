@@ -1,0 +1,40 @@
+[
+    {
+        "user_id": 1,
+        "first_name": "Diego",
+        "last_name": "Gonzalez",
+        "chequing_balance": 351353.12,
+        "savings_balance": 1255.12,
+        "credit_cards": [
+            {
+                "card_no": 1111222233334444,
+                "current_balance": 135135
+            },
+            {
+                "card_no": 1234567890123456,
+                "current_balance": 135135
+            },
+            {
+                "card_no": 4444333322221111,
+                "current_balance": 135135
+            }
+        ]
+    },
+    {
+        "user_id": 2,
+        "first_name": "Marie",
+        "last_name": "Spitzer",
+        "chequing_balance": 351353.12,
+        "savings_balance": 1255.12,
+        "credit_cards": [
+            {
+                "card_no": 1010101010101010,
+                "current_balance": 135135
+            },
+            {
+                "card_no": 1234123412341234,
+                "current_balance": 135135
+            }
+        ]
+    }
+]
