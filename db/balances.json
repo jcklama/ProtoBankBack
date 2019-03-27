@@ -7,16 +7,16 @@
         "savings_balance": 1255.12,
         "credit_cards": [
             {
-                "card_no": 1111222233334444,
-                "current_balance": 135135
+                "card_no": 1111222233337201,
+                "current_balance": 9024.12
             },
             {
                 "card_no": 1234567890123456,
-                "current_balance": 135135
+                "current_balance": 33000.22
             },
             {
-                "card_no": 4444333322221111,
-                "current_balance": 135135
+                "card_no": 44443333222214211,
+                "current_balance": 1.32
             }
         ]
     },
@@ -24,16 +24,16 @@
         "user_id": 2,
         "first_name": "Marie",
         "last_name": "Spitzer",
-        "chequing_balance": 351353.12,
-        "savings_balance": 1255.12,
+        "chequing_balance": 3.12,
+        "savings_balance": 1.12,
         "credit_cards": [
             {
-                "card_no": 1010101010101010,
-                "current_balance": 135135
+                "card_no": 1010101010101350,
+                "current_balance": 652.12
             },
             {
-                "card_no": 1234123412341234,
-                "current_balance": 135135
+                "card_no": 12341234123415289,
+                "current_balance": 10.21
             }
         ]
     }
