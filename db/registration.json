@@ -1,0 +1,56 @@
+[
+    {
+        "basic_info": {
+            "first_name": "Diego",
+            "last_name": "Gonzalez",
+            "phone_number": "451-124-5112",
+            "email_address": "dgonz@gmail.com"
+        },
+        "address": {
+            "postal_code": "G1F 1F5",
+            "street_no_and_name": "45 Kirklane Drive",
+            "city": "Rome",
+            "country": "Italy"
+        },
+        "banking_info": {
+            "occupation": "accountant",
+            "annual_salary": 45000,
+            "monthly_expenses": 2000
+        },
+        "products": {
+            "chequing": true,
+            "savings": true,
+            "line_of_credit": false,
+            "mortgage": true,
+            "credit_card": true
+        },
+        "user_id": 1
+    },
+    {
+        "basic_info": {
+            "first_name": "Marie",
+            "last_name": "Spitzer",
+            "phone_number": "640-998-3252",
+            "email_address": "mspitzer@gmail.com"
+        },
+        "address": {
+            "street_no_and_name": "425 Godstone Lane",
+            "city": "Mexico City",
+            "country": "Mexico",
+            "postal_code": "Q1P 0F1"
+        },
+        "banking_info": {
+            "occupation": "firefighter",
+            "annual_salary": 95000,
+            "monthly_expenses": 5000
+        },
+        "products": {
+            "chequing": false,
+            "savings": false,
+            "line_of_credit": false,
+            "mortgage": false,
+            "credit_card": true
+        },
+        "user_id": 2
+    }
+]
