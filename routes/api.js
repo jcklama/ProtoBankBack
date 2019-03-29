@@ -59,6 +59,15 @@ router.post('/registration', (req, res) => {
     }
 })
 
+router.get('/registeredUsersInfo', (req, res) => {
+    const data = fs.readFileSync('db/registration.json', 'utf8');
+    if (data) {
+        res.status(200).send(data);
+    } else {
+        res.status(500).send({ error: "Registered users not found" });
+    }
+})
+
 router.get('/', (req, res) => {
     res.send(JSON.stringify('From API route'));
 })
