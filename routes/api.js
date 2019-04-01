@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken');
 
 // middleware to verify token
 function verifyToken(req, res, next) {
-    console.log(req.headers.authorization);
     const RSA_PRIVATE_KEY = fs.readFileSync('keys/private.key');
     if (!req.headers.authorization) {
         return status(401).send('Unauthorized request');
@@ -36,6 +35,7 @@ router.post('/registration', (req, res) => {
 
     if (!validateRegistration(fn, ln, email)) {
         addNewUserToUsers(request);
+        addNewUserBalance(request);
         const addedData = addToRegistration(request);
 
         const RSA_PRIVATE_KEY = fs.readFileSync('keys/private.key');
@@ -74,7 +74,9 @@ router.get('/', (req, res) => {
 
 router.post('/login', (req, res) => {
     let userData = req.body;
-    if (validateEmailAndPassword(userData.username, userData.password)) {
+    const usernameTrim = userData.username.trim();
+    const passwordTrim = userData.password.trim();
+    if (validateEmailAndPassword(usernameTrim, passwordTrim)) {
         const userId = getIdUsingUsername(userData.username);
         const RSA_PRIVATE_KEY = fs.readFileSync('keys/private.key');
 
@@ -125,6 +127,8 @@ const getBalanceById = (id) => {
     const filtered = parsedBalances.filter((balance) => {
         if (balance.user_id.toString() === id) { return true; }
     })
+    console.log(parsedBalances);
+
     return filtered[0];
 }
 
@@ -187,6 +191,23 @@ const addNewUserToUsers = (requestBody) => {
     const stringifiedNewData = JSON.stringify(data);
 
     fs.writeFileSync('db/users.json', stringifiedNewData);
+}
+
+const addNewUserBalance = (requestBody) => {
+    const data = JSON.parse(fs.readFileSync('db/balances.json', 'utf8'));
+    const dataLength = data.length + 1;
+
+    data.push({
+        user_id: dataLength,
+        first_name: requestBody.basic_info.first_name,
+        last_name: requestBody.basic_info.last_name,
+        chequing_balance: 0,
+        savings_balance: 0,
+        credit_cards: []
+    });
+
+    const balanceToAddString = JSON.stringify(data);
+    fs.writeFileSync('db/balances.json', balanceToAddString);
 }
 
 const getLengthOfRegistered = () => {

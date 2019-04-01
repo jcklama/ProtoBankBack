@@ -15,7 +15,7 @@
                 "current_balance": 33000.22
             },
             {
-                "card_no": 44443333222214211,
+                "card_no": 44443333222214210,
                 "current_balance": 1.32
             }
         ]
@@ -32,9 +32,17 @@
                 "current_balance": 652.12
             },
             {
-                "card_no": 12341234123415289,
+                "card_no": 12341234123415288,
                 "current_balance": 10.21
             }
         ]
+    },
+    {
+        "user_id": 3,
+        "first_name": "verb",
+        "last_name": "atim",
+        "chequing_balance": 0,
+        "savings_balance": 0,
+        "credit_cards": []
     }
 ]
